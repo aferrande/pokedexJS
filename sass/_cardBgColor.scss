@@ -1,0 +1,127 @@
+@import "./colorVariables.scss";
+
+.grass {
+  background-color: $grass-color;
+  .typingBg {
+    background-color: darken($color: $grass-color, $amount: 10);
+  }
+}
+
+.fire {
+  background-color: $fire-color;
+  .typingBg {
+    background-color: darken($color: $fire-color, $amount: 10);
+  }
+}
+
+.water {
+  background-color: $water-color;
+  .typingBg {
+    background-color: darken($color: $water-color, $amount: 10);
+  }
+}
+
+.electric {
+  background-color: $electric-color;
+  .typingBg {
+    background-color: darken($color: $electric-color, $amount: 10);
+  }
+}
+
+.rock {
+  background-color: $rock-color;
+  .typingBg {
+    background-color: darken($color: $rock-color, $amount: 10);
+  }
+}
+
+.bug {
+  background-color: $bug-color;
+  .typingBg {
+    background-color: darken($color: $bug-color, $amount: 10);
+  }
+}
+
+.normal {
+  background-color: $normal-color;
+  .typingBg {
+    background-color: darken($color: $normal-color, $amount: 10);
+  }
+}
+
+.fighting {
+  background-color: $fighting-color;
+  .typingBg {
+    background-color: darken($color: $fighting-color, $amount: 10);
+  }
+}
+
+.flying {
+  background-color: $flying-color;
+  .typingBg {
+    background-color: darken($color: $flying-color, $amount: 10);
+  }
+}
+
+.poison {
+  background-color: $poison-color;
+  .typingBg {
+    background-color: darken($color: $poison-color, $amount: 10);
+  }
+}
+
+.ground {
+  background-color: $ground-color;
+  .typingBg {
+    background-color: darken($color: $ground-color, $amount: 10);
+  }
+}
+
+.psychic {
+  background-color: $psychic-color;
+  .typingBg {
+    background-color: darken($color: $psychic-color, $amount: 10);
+  }
+}
+
+.ice {
+  background-color: $ice-color;
+  .typingBg {
+    background-color: darken($color: $ice-color, $amount: 10);
+  }
+}
+
+.dragon {
+  background-color: $dragon-color;
+  .typingBg {
+    background-color: darken($color: $dragon-color, $amount: 10);
+  }
+}
+
+.ghost {
+  background-color: $ghost-color;
+  .typingBg {
+    background-color: darken($color: $ghost-color, $amount: 10);
+  }
+}
+
+.dark {
+  background-color: $dark-color;
+  .typingBg {
+    background-color: darken($color: $dark-color, $amount: 10);
+  }
+}
+
+.steel {
+  background-color: $steel-color;
+  .typingBg {
+    background-color: darken($color: $steel-color, $amount: 10);
+  }
+}
+
+.fairy {
+  background-color: $fairy-color;
+  .typingBg {
+    background-color: darken($color: $fairy-color, $amount: 10);
+  }
+}
