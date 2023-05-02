@@ -2,64 +2,17 @@
 @import "./_common.scss";
 @import "./_content.scss";
 @import "./cardBgColor.scss";
-@import "./_card.scss";
+@import "./_pokedexCards.scss";
 @import "./_pokeDetailedInfo.scss";
 
-@include xs {
-  .content {
-    background-size: cover;
-  }
-
-  .pokedex {
-    grid-template-columns: 1fr;
-    grid-template-areas: "1";
-  }
-
-  .types {
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 24px;
-  }
-
-  .typeBg {
-    padding: 0px 6px;
-    text-align: center;
-    width: 6.7rem;
-    border-radius: 22px;
-  }
-
-  .card {
-    width: 20rem;
-    height: 12.5rem;
-  }
-
-  .pokeName {
-    font-size: 24px;
-  }
-  .pokeImg {
-    width: 10rem;
-  }
-
-  .pokeNum {
-    font-size: 20px;
-  }
-}
-
 @include sm {
-  .content {
-    background-size: cover;
-  }
-
   .pokedex {
     grid-template-columns: 1fr;
     grid-template-areas: "1";
   }
 
   .types {
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
+    padding-top: 1rem;
     font-size: 16px;
   }
 
@@ -78,6 +31,7 @@
   .pokeName {
     font-size: 24px;
   }
+
   .pokeImg {
     width: 7rem;
   }
@@ -88,20 +42,8 @@
 }
 
 @include md {
-  .content {
-    background-size: cover;
-    padding: 1rem;
-  }
-  .pokedex {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "1";
-  }
-
   .types {
     padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
     font-size: 24px;
   }
 
@@ -120,6 +62,7 @@
   .pokeName {
     font-size: 34px;
   }
+
   .pokeImg {
     width: 12rem;
   }
@@ -127,12 +70,28 @@
   .pokeNum {
     font-size: 24px;
   }
+
+  .pokeImgDetailed {
+    width: 22rem;
+    align-self: center;
+    position: absolute;
+    z-index: 9;
+    padding-top: 16rem;
+  }
+
+  .progress {
+    height: 3px;
+    width: 10rem;
+    display: flex;
+    align-self: center;
+  }
+
+  .pokeNameDetailed {
+    font-size: 3rem;
+  }
 }
 
 @include lg {
-  .content {
-    background-size: cover;
-  }
   .pokedex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -140,10 +99,10 @@
   }
 
   .types {
-    padding-top: 2rem;
+    //   padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    font-size: 24px;
+    //   font-size: 24px;
   }
 
   .typeBg {
@@ -158,14 +117,9 @@
     height: 15rem;
   }
 
-  .pokeName {
-    font-size: 34px;
-  }
-  .pokeImg {
-    width: 12rem;
-  }
-
-  .pokeNum {
-    font-size: 24px;
+  .detailedCard {
+    margin: auto;
+    width: 50rem;
+    height: auto;
   }
 }

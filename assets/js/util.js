@@ -1,9 +1,6 @@
-import fetchPokemons from "./fetchPokemons.js";
-
 //First letter uppercase (or could just 'text-transform: capitalize' in .css)
 const firstLetterUppercase = (name) =>
   name.charAt(0).toUpperCase() + name.slice(1);
-export default firstLetterUppercase;
 
 //"infinite" scroll loading of Pokemons
 let limit = 14;
@@ -23,9 +20,8 @@ window.addEventListener(
       fetchPokemons(limit, offset);
 
       setTimeout(() => {
-        getPokemonId();
         scrolled = true;
-      }, 300);
+      }, 200);
     } else {
       loadingSpinner.classList.add("visually-hidden");
     }
@@ -35,4 +31,25 @@ window.addEventListener(
   }
 );
 
-export const number = () => {};
+const getPokemonImage = async (url) => {
+  if (url !== undefined) {
+    const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${url}`);
+    const data = await resp.json();
+    const image = data.sprites.other["official-artwork"].front_default;
+    return image;
+  }
+};
+
+const getPokemonId = () => {
+  const div = document.querySelector(".content");
+  console.log("main.js ", div);
+  div.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+      console.log("id: ", e.target.id);
+      fetchSinglePokemon(e.target.id);
+    }
+  });
+};
+
+getPokemonId();
+// export const number = () => {};

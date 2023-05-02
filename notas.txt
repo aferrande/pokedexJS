@@ -1,28 +1,11 @@
-quando clicar o botão renderizar o que for pedido. Talvez não seja necessário criar uma página nova ou coisa do tipo
-
-
-
-
-
-eu vou pegar essa div *********     <div class="aboutPokemon">   *************** e renderizar dinamicamente o seguinte conteúdo:
-
-        <ol class="first">
-          <li class="itemTitle">Species</li>
-          <li>Seed</li>
-          <li class="itemTitle">Height</li>
-          <li>0.70cm</li>
-          <li class="itemTitle">Weight</li>
-          <li>6.9kg</li>
-          <li class="itemTitle">Abilities</li>
-          <li>Overgrow, Chlorophyl</li>
-        </ol>
-        <h3>Breeding</h3>
-        <ol class="second">
-          <li class="itemTitle">Gender</li>
-          <li>87.5% 12.5%</li>
-          <li class="itemTitle">Egg Groups</li>
-          <li>Monster, Grass</li>
-        </ol>
-
-
-Mudar dinamicamente o titulo da pagina também de acordo com o pokemon document.title = newPageTitle;
+// const getPokemonId = () => {
+//   console.log("READY!");
+//   const buttn = document.querySelectorAll(".clica");
+//   console.log(buttn);
+//   buttn.forEach((pokemon) =>
+//     pokemon.addEventListener("click", () => {
+//       console.log(pokemon);
+//       fetchSinglePokemon(pokemon.id);
+//     })
+//   );
+// };

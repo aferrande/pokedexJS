@@ -1,5 +1,3 @@
-import renderPokedex from "./renderPokedex.js";
-
 const fetchPokemons = async (limit, offset) => {
   try {
     const pokemonList = await fetch(
@@ -31,5 +29,3 @@ const pokemonInfo = (data) => {
 };
 
 fetchPokemons(14, 0);
-
-export default fetchPokemons;
