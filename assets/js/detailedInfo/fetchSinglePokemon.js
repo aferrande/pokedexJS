@@ -1,10 +1,3 @@
-// import pageRender from "./pageRender.js";
-// import pokemonDetails from "./pokemonDetails.js";
-
-// const pokemon = document.querySelector(`#${id}`);
-
-// pokemon.addEventListener("click");
-
 const fetchSinglePokemon = async (id) => {
   try {
     const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -22,9 +15,3 @@ const fetchSinglePokemon = async (id) => {
     console.error(error);
   }
 };
-
-// fetchSinglePokemon(1);
-
-// export default fetchSinglePokemon;
-
-//(`https://pokeapi.co/api/v2/pokemon/${id}`);

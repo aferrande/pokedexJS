@@ -30,23 +30,26 @@
   </head>
   <body>
     <section class="content">
-      <h1>Pokedex</h1>
-      <ol class="pokedex">
-        <!-- pokemon list -->
-      </ol>
-      <div
-        class="d-flex justify-content-center visually-hidden"
-        id="loadingSpinner">
-        <div class="spinner-border text-danger" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
+      <!-- render goes here -->
     </section>
 
-    <script src="./assets/js/util.js"></script>
-    <script src="./assets/js/fetchPokemons.js"></script>
-    <script src="./assets/js/renderPokedex.js"></script>
+    <!-- router -->
+    <!-- <script src="assets/js/router.js"></script> -->
 
+    <!-- common/repetitive code -->
+    <script src="./assets/js/pokedex/util.js"></script>
+
+    <!-- pokemon gen menu -->
+    <script src="assets/js/generationsMenu.js"></script>
+
+    <!-- base skeleton code -->
+    <script src="./assets/js/pokedex/basePageCode.js"></script>
+
+    <!-- pokedex -->
+    <script src="./assets/js/pokedex/fetchPokemons.js"></script>
+    <script src="./assets/js/pokedex/renderPokedex.js"></script>
+
+    <!-- single pokemon details -->
     <script src="assets/js/detailedInfo/fetchSinglePokemon.js"></script>
     <script src="assets/js/detailedInfo/pokemonDetails.js"></script>
     <script src="assets/js/detailedInfo/pokeAbout.js"></script>

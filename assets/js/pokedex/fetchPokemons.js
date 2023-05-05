@@ -20,12 +20,10 @@ const fetchPokemons = async (limit, offset) => {
 
 const pokemonInfo = (data) => {
   const name = data.name;
-  //as we only have 2 types per pokemon we can hard code the index, else we could use .map and destructuring
+  //as we only have 2 types per pokemon we can hard code the index, else we could use .map/destructuring
   const type1 = data.types[0].type.name;
   const type2 = data.types[1]?.type.name;
   const id = data.id;
   const image = data.sprites.other["official-artwork"].front_default;
   renderPokedex(name, type1, type2, id, image);
 };
-
-fetchPokemons(14, 0);

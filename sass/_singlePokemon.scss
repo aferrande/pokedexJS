@@ -2,32 +2,41 @@
   display: flex;
   flex-direction: column;
   color: white;
+  border-radius: 15px;
+}
+
+nav {
+  width: fit-content;
+  height: fit-content;
 }
 
 .backToHomePageArrow {
+  width: 6rem;
   text-decoration: none;
   color: white;
-  padding: 2rem 3rem;
   z-index: 9;
+  padding: 1rem 0 0 2rem;
 }
 
 .pokeImgDetailed {
-  width: 17rem;
+  width: 16.5rem;
   display: flex;
   align-self: center;
   position: absolute;
   z-index: 8;
-  padding-top: 20rem;
+  padding-top: 18rem;
 }
 
 .pokeNameBig {
-  padding: 1rem;
-  font-size: 3rem;
+  padding: 2rem 0 0 1rem;
+  font-size: 2.5rem;
   text-transform: capitalize;
+  width: fit-content;
+  height: fit-content;
 }
 
 .pokeNumBig {
-  padding: 1rem;
+  padding: 0 1rem 0 0;
   font-size: 1rem;
   align-self: end;
   font-size: 38px;
@@ -38,7 +47,7 @@
   display: flex;
   flex-direction: row;
   gap: 0.3rem;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   font-size: 1.6rem;
 }
 
@@ -52,9 +61,7 @@
 
 .menuTitle {
   position: relative;
-
   text-decoration: none;
-
   color: #464646;
   padding-bottom: 20px;
 }
@@ -143,6 +150,7 @@ h4 {
 .detailedPokemonInfo {
   background-color: white;
   padding: 1rem;
+  border-radius: 0 0 15px 15px;
 }
 
 .evoArrow {

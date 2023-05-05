@@ -1,0 +1,63 @@
+.pokeGens {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.genCard {
+  align-items: center;
+}
+
+.genTitleLink {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  position: absolute;
+  z-index: 9;
+  bottom: -0.3rem;
+  width: inherit;
+  height: inherit;
+}
+
+.genStarters {
+  position: absolute;
+  bottom: 0;
+}
+
+#gen1Starter {
+  width: 11rem;
+}
+
+#gen2Starter {
+  width: 9rem;
+}
+
+#gen3Starter {
+  width: 9rem;
+}
+
+#gen4Starter {
+  width: 9rem;
+}
+
+#gen5Starter {
+  width: 9rem;
+}
+
+#gen6Starter {
+  width: 9rem;
+}
+
+#gen7Starter {
+  width: 9rem;
+}
+
+#gen8Starter {
+  width: 7rem;
+}
+
+#gen9Starter {
+  width: 9rem;
+}

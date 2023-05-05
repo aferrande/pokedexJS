@@ -1,35 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-h1 {
-  padding-left: auto;
-  font-weight: 700;
-}
-
-.content {
-  padding: 1rem;
-  min-height: 100vh;
-  background: rgb(214, 196, 236);
-  background: linear-gradient(180deg, rgb(214, 196, 236) 0%, rgb(191, 180, 234) 25%, rgb(175, 171, 234) 50%, rgb(159, 163, 235) 75%, rgb(136, 150, 232) 100%);
-  color: rgb(0, 0, 0);
-}
-
-.pokedex, .types {
-  padding: 0rem;
-  margin: auto;
-  list-style: none;
-  gap: 5px 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "1 2";
-  margin-top: 0.5rem;
-  justify-items: center;
-}
-
 .grass {
   background-color: #78c850;
 }
@@ -156,9 +124,41 @@ h1 {
   background-color: #e76d88;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.content {
+  padding: 1rem;
+  min-height: 100vh;
+  background: rgb(214, 196, 236);
+  background: linear-gradient(180deg, rgb(214, 196, 236) 0%, rgb(191, 180, 234) 25%, rgb(175, 171, 234) 50%, rgb(159, 163, 235) 75%, rgb(136, 150, 232) 100%);
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  padding-left: auto;
+  font-weight: 700;
+}
+
+.pokedex, .types {
+  padding: 0rem;
+  margin: auto;
+  list-style: none;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "1";
+  margin-top: 0.5rem;
+  justify-items: center;
+}
+
 .card {
-  width: 20.8rem;
-  height: 8rem;
+  width: 15rem;
+  height: 9.5rem;
   color: rgb(255, 255, 255);
   padding: 0.2rem;
   display: flex;
@@ -170,7 +170,7 @@ h1 {
 }
 
 .pokeImg {
-  width: 5rem;
+  width: 7rem;
   display: flex;
   align-self: end;
 }
@@ -180,18 +180,17 @@ h1 {
   width: fit-content;
   height: min-content;
   line-height: 16px;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .pokeNum {
   padding: 0;
   text-align: right;
   height: fit-content;
-  font-size: 10px;
   color: #000000;
   opacity: 0.3;
   text-align: right;
-  font-size: 0.625rem;
+  font-size: 1.1rem;
 }
 
 .info {
@@ -207,13 +206,15 @@ h1 {
 .typeBg {
   padding: 0px 6px;
   text-align: center;
-  width: 8.7rem;
-  border-radius: 12px;
+  width: 4.7rem;
+  border-radius: 22px;
 }
 
 .types {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
+  font-size: 16px;
 }
 
 .bttnStyling {
@@ -223,36 +224,53 @@ h1 {
   outline: none;
 }
 
+.backToGenPageArrow {
+  text-decoration: none;
+  bottom: 80%;
+  color: black;
+  z-index: 9;
+  padding-top: 1rem;
+}
+
 .detailedContent {
   display: flex;
   flex-direction: column;
   color: white;
+  border-radius: 15px;
+}
+
+nav {
+  width: fit-content;
+  height: fit-content;
 }
 
 .backToHomePageArrow {
+  width: 6rem;
   text-decoration: none;
   color: white;
-  padding: 2rem 3rem;
   z-index: 9;
+  padding: 1rem 0 0 2rem;
 }
 
 .pokeImgDetailed {
-  width: 17rem;
+  width: 16.5rem;
   display: flex;
   align-self: center;
   position: absolute;
   z-index: 8;
-  padding-top: 20rem;
+  padding-top: 18rem;
 }
 
 .pokeNameBig {
-  padding: 1rem;
-  font-size: 3rem;
+  padding: 2rem 0 0 1rem;
+  font-size: 2.5rem;
   text-transform: capitalize;
+  width: fit-content;
+  height: fit-content;
 }
 
 .pokeNumBig {
-  padding: 1rem;
+  padding: 0 1rem 0 0;
   font-size: 1rem;
   align-self: end;
   font-size: 38px;
@@ -263,7 +281,7 @@ h1 {
   display: flex;
   flex-direction: row;
   gap: 0.3rem;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   font-size: 1.6rem;
 }
 
@@ -363,6 +381,7 @@ h4 {
 .detailedPokemonInfo {
   background-color: white;
   padding: 1rem;
+  border-radius: 0 0 15px 15px;
 }
 
 .evoArrow {
@@ -410,35 +429,70 @@ figcaption {
   justify-self: center;
 }
 
-@media (min-width: 280px) {
-  .pokedex, .types {
-    grid-template-columns: 1fr;
-    grid-template-areas: "1";
-  }
-  .types {
-    padding-top: 1rem;
-    font-size: 16px;
-  }
-  .typeBg {
-    padding: 0px 6px;
-    text-align: center;
-    width: 4.7rem;
-    border-radius: 22px;
-  }
-  .card {
-    width: 15rem;
-    height: 9.5rem;
-  }
-  .pokeName {
-    font-size: 24px;
-  }
-  .pokeImg {
-    width: 7rem;
-  }
-  .pokeNum {
-    font-size: 18px;
-  }
+.pokeGens {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
 }
+
+.genCard {
+  align-items: center;
+}
+
+.genTitleLink {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  position: absolute;
+  z-index: 9;
+  bottom: -0.3rem;
+  width: inherit;
+  height: inherit;
+}
+
+.genStarters {
+  position: absolute;
+  bottom: 0;
+}
+
+#gen1Starter {
+  width: 11rem;
+}
+
+#gen2Starter {
+  width: 9rem;
+}
+
+#gen3Starter {
+  width: 9rem;
+}
+
+#gen4Starter {
+  width: 9rem;
+}
+
+#gen5Starter {
+  width: 9rem;
+}
+
+#gen6Starter {
+  width: 9rem;
+}
+
+#gen7Starter {
+  width: 9rem;
+}
+
+#gen8Starter {
+  width: 7rem;
+}
+
+#gen9Starter {
+  width: 9rem;
+}
+
 @media (min-width: 520px) {
   .types {
     padding-top: 2rem;
@@ -468,7 +522,7 @@ figcaption {
     align-self: center;
     position: absolute;
     z-index: 9;
-    padding-top: 16rem;
+    padding-top: 15rem;
   }
   .progress {
     height: 3px;
@@ -476,11 +530,40 @@ figcaption {
     display: flex;
     align-self: center;
   }
-  .pokeNameDetailed {
-    font-size: 3rem;
+  .pokeNameBig {
+    padding: 0 0 0 1rem;
+    font-size: 4rem;
+    text-transform: capitalize;
+  }
+  #gen1Starter {
+    width: 16rem;
+  }
+  #gen2Starter {
+    width: 14rem;
+  }
+  #gen3Starter {
+    width: 14rem;
+  }
+  #gen4Starter {
+    width: 14rem;
+  }
+  #gen5Starter {
+    width: 14rem;
+  }
+  #gen6Starter {
+    width: 14rem;
+  }
+  #gen7Starter {
+    width: 14rem;
+  }
+  #gen8Starter {
+    width: 12rem;
+  }
+  #gen9Starter {
+    width: 14rem;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 840px) {
   .pokedex, .types {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -502,8 +585,30 @@ figcaption {
   }
   .detailedCard {
     margin: auto;
-    width: 50rem;
+    width: 50.5rem;
     height: auto;
+  }
+  .pokeImgDetailed {
+    width: 24rem;
+    align-self: center;
+    position: absolute;
+    z-index: 9;
+    padding-top: 13rem;
+  }
+  .pokeGens {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .genCard {
+    width: 24rem;
+  }
+  .pokeGens {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

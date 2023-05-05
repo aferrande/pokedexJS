@@ -1,47 +1,11 @@
+@import "./cardBgColor.scss";
 @import "./_breakpoints.scss";
 @import "./_common.scss";
-@import "./_content.scss";
-@import "./cardBgColor.scss";
-@import "./_pokedexCards.scss";
-@import "./_pokeDetailedInfo.scss";
+@import "./_pokedex.scss";
+@import "./_singlePokemon.scss";
+@import "./_genMenu.scss";
 
 @include sm {
-  .pokedex {
-    grid-template-columns: 1fr;
-    grid-template-areas: "1";
-  }
-
-  .types {
-    padding-top: 1rem;
-    font-size: 16px;
-  }
-
-  .typeBg {
-    padding: 0px 6px;
-    text-align: center;
-    width: 4.7rem;
-    border-radius: 22px;
-  }
-
-  .card {
-    width: 15rem;
-    height: 9.5rem;
-  }
-
-  .pokeName {
-    font-size: 24px;
-  }
-
-  .pokeImg {
-    width: 7rem;
-  }
-
-  .pokeNum {
-    font-size: 18px;
-  }
-}
-
-@include md {
   .types {
     padding-top: 2rem;
     font-size: 24px;
@@ -76,7 +40,7 @@
     align-self: center;
     position: absolute;
     z-index: 9;
-    padding-top: 16rem;
+    padding-top: 15rem;
   }
 
   .progress {
@@ -86,12 +50,50 @@
     align-self: center;
   }
 
-  .pokeNameDetailed {
-    font-size: 3rem;
+  .pokeNameBig {
+    padding: 0 0 0 1rem;
+    font-size: 4rem;
+    text-transform: capitalize;
+  }
+
+  #gen1Starter {
+    width: 16rem;
+  }
+
+  #gen2Starter {
+    width: 14rem;
+  }
+
+  #gen3Starter {
+    width: 14rem;
+  }
+
+  #gen4Starter {
+    width: 14rem;
+  }
+
+  #gen5Starter {
+    width: 14rem;
+  }
+
+  #gen6Starter {
+    width: 14rem;
+  }
+
+  #gen7Starter {
+    width: 14rem;
+  }
+
+  #gen8Starter {
+    width: 12rem;
+  }
+
+  #gen9Starter {
+    width: 14rem;
   }
 }
 
-@include lg {
+@include md {
   .pokedex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -99,10 +101,8 @@
   }
 
   .types {
-    //   padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    //   font-size: 24px;
   }
 
   .typeBg {
@@ -119,7 +119,31 @@
 
   .detailedCard {
     margin: auto;
-    width: 50rem;
+    width: 50.5rem;
     height: auto;
+  }
+
+  .pokeImgDetailed {
+    width: 24rem;
+    align-self: center;
+    position: absolute;
+    z-index: 9;
+    padding-top: 13rem;
+  }
+  .pokeGens {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include xl {
+  .genCard {
+    width: 24rem;
+  }
+  .pokeGens {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

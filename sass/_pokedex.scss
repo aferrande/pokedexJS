@@ -1,6 +1,23 @@
+h1 {
+  padding-left: auto;
+  font-weight: 700;
+}
+
+.pokedex {
+  padding: 0rem;
+  margin: auto;
+  list-style: none;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "1";
+  margin-top: 0.5rem;
+  justify-items: center;
+}
+
 .card {
-  width: 20.8rem;
-  height: 8rem;
+  width: 15rem;
+  height: 9.5rem;
   color: rgb(255, 255, 255);
   padding: 0.2rem;
   display: flex;
@@ -12,7 +29,7 @@
 }
 
 .pokeImg {
-  width: 5rem;
+  width: 7rem;
   display: flex;
   align-self: end;
 }
@@ -22,18 +39,17 @@
   width: fit-content;
   height: min-content;
   line-height: 16px;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .pokeNum {
   padding: 0;
   text-align: right;
   height: fit-content;
-  font-size: 10px;
   color: #000000;
   opacity: 0.3;
   text-align: right;
-  font-size: 0.625rem;
+  font-size: 1.1rem;
 }
 
 .info {
@@ -49,14 +65,16 @@
 .typeBg {
   padding: 0px 6px;
   text-align: center;
-  width: 8.7rem;
-  border-radius: 12px;
+  width: 4.7rem;
+  border-radius: 22px;
 }
 
 .types {
   @extend .pokedex;
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
+  font-size: 16px;
 }
 
 .bttnStyling {
@@ -64,4 +82,12 @@
   border: none;
   background: none;
   outline: none;
+}
+
+.backToGenPageArrow {
+  text-decoration: none;
+  bottom: 80%;
+  color: black;
+  z-index: 9;
+  padding-top: 1rem;
 }

@@ -1,7 +1,6 @@
 const renderPokedex = (name, type1, type2, id, image) => {
-  //we could use document.createElement and manipulate the DOM that way, but it would leave us with an extense and cluttered code. So we'll return HTML as if returning JSX when using React, thus simplyfing and making our code easier to read
+  //we could use document.createElement and manipulate the DOM that way, but it would leave us with an extense and cluttered code. So we'll return HTML as if returning JSX when using React.
 
-  //inside our card we need a name, typings, and image. We'll use the id for identifying and further when we expand the pokemon info
   const render = `
     <li id=poke${id} class="card ${type1}">
     <span class="pokeNum">#${id}</span>
@@ -15,7 +14,9 @@ const renderPokedex = (name, type1, type2, id, image) => {
   }</li>
         </ol>
         <img src="${image}" alt="${name} default sprite" class="pokeImg">
-        <button id="${id}" class="bttnStyling stretched-link"></button>
+        <nav>
+        <a href="#pokemon" id="${id}" class="bttnStyling stretched-link"></a>
+        </nav>
       </div>
     </li>
   `;

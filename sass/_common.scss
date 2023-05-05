@@ -5,3 +5,18 @@
   font-family: "Inter", sans-serif;
   // color: white;
 }
+
+.content {
+  padding: 1rem;
+  min-height: 100vh;
+  background: rgb(214, 196, 236);
+  background: linear-gradient(
+    180deg,
+    rgba(214, 196, 236, 1) 0%,
+    rgba(191, 180, 234, 1) 25%,
+    rgba(175, 171, 234, 1) 50%,
+    rgba(159, 163, 235, 1) 75%,
+    rgba(136, 150, 232, 1) 100%
+  );
+  color: rgb(0, 0, 0);
+}

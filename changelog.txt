@@ -1,0 +1,3 @@
+singlePokemonRender -> href to # from ./index.html
+
+backToGenPageArrow mudar a distância de acordo com o tamanho da tela
