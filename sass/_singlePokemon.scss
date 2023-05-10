@@ -1,8 +1,13 @@
+h1 {
+  padding-left: 2rem;
+}
+
 .detailedContent {
   display: flex;
   flex-direction: column;
   color: white;
   border-radius: 15px;
+  box-shadow: 2px 2px 5px black;
 }
 
 nav {
@@ -24,11 +29,11 @@ nav {
   align-self: center;
   position: absolute;
   z-index: 8;
-  padding-top: 18rem;
+  padding-top: 15rem;
 }
 
 .pokeNameBig {
-  padding: 2rem 0 0 1rem;
+  padding: 0 0 0 1rem;
   font-size: 2.5rem;
   text-transform: capitalize;
   width: fit-content;
@@ -64,6 +69,7 @@ nav {
   text-decoration: none;
   color: #464646;
   padding-bottom: 20px;
+  z-index: 9;
 }
 
 .menuTitle:hover {
@@ -99,8 +105,8 @@ nav {
 .titles {
   border-bottom: 2px solid grey;
   background-color: white;
-  margin-top: 15rem;
-  padding-top: 4rem;
+  margin-top: 13.4rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -115,6 +121,7 @@ nav {
 }
 
 .mainAbout {
+  padding-left: 0;
   list-style: none;
   background-color: white;
   color: black;
@@ -159,7 +166,7 @@ h4 {
 }
 
 .evoImg {
-  width: 35%;
+  width: 55%;
 }
 
 .evolutionChain {

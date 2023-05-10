@@ -2,14 +2,14 @@ const mainURL = "https://pokeapi.co/api/v2";
 
 const pokemonDetails = async (pokemon) => {
   try {
-    const pokeInfo = await fetch(`${mainURL}/pokemon/${pokemon}`);
     const speciesInfo = await fetch(`${mainURL}/pokemon-species/${pokemon}`);
-
-    const about = await pokeInfo.json();
     const species = await speciesInfo.json();
 
     const evoChainInfo = await fetch(`${species.evolution_chain.url}`);
     const evolution = await evoChainInfo.json();
+
+    const pokeInfo = await fetch(`${mainURL}/pokemon/${pokemon}`);
+    const about = await pokeInfo.json();
 
     //about
     let abilities = [];
@@ -22,8 +22,13 @@ const pokemonDetails = async (pokemon) => {
       eggGroup.push(group.name);
     }
 
+    let specimen = species.genera[7]?.genus;
+    let spec =
+      specimen !== undefined
+        ? species.genera[7].genus
+        : species.genera[3].genus;
     const pokeAboutData = {
-      species: species.genera[7].genus,
+      species: spec,
       height: about.height * 10,
       weight: about.weight / 10,
       abilities: abilities.join(", "),
@@ -34,7 +39,10 @@ const pokemonDetails = async (pokemon) => {
 
     pokeAbout(pokeAboutData);
     const showAbout = document.querySelector("#about");
-    showAbout.addEventListener("click", () => pokeAbout(pokeAboutData));
+    showAbout.addEventListener("click", (e) => {
+      e.preventDefault();
+      pokeAbout(pokeAboutData);
+    });
 
     //base stats
     let baseStatsValue = [];
@@ -43,30 +51,55 @@ const pokemonDetails = async (pokemon) => {
     }
 
     const showStats = document.querySelector("#baseStats");
-    showStats.addEventListener("click", () => baseStats(baseStatsValue));
+    showStats.addEventListener("click", (e) => {
+      e.preventDefault();
+      baseStats(baseStatsValue);
+    });
 
     //evolution chain
     const name1 = evolution.chain.species.name; //firstEvo
-    const image1 = await getPokemonImage(evolution.chain.species.name);
 
     const name2 = evolution.chain.evolves_to[0]?.species.name; //secondEvo
-    const image2 = await getPokemonImage(
-      evolution.chain.evolves_to[0]?.species.name
-    );
+
     const name3 = evolution.chain.evolves_to[0]?.evolves_to[0]?.species.name; //thirdEvo
-    const image3 = await getPokemonImage(
-      evolution.chain.evolves_to[0]?.evolves_to[0]?.species.name
+
+    const nameArray = [name1, name2, name3];
+
+    const imageArray = await Promise.all(
+      nameArray.map(async (name) => {
+        const image = await getPokemonImage(name);
+        return image;
+      })
     );
 
     const showEvos = document.querySelector("#evolution");
-    showEvos.addEventListener("click", () => {
-      if (image3 !== undefined) {
-        pokeEvolution(image1, name1, image2, name2, image3, name3);
+    showEvos.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (imageArray[2] !== undefined) {
+        pokeEvolution(
+          imageArray[0],
+          name1,
+          imageArray[1],
+          name2,
+          imageArray[2],
+          name3
+        );
       } else {
-        pokeEvolution(image1, name1, image2, name2);
+        pokeEvolution(imageArray[0], name1, imageArray[1], name2);
       }
     });
   } catch (error) {
     console.error(error);
   }
+};
+
+//image getter for easier work when possible
+const getPokemonImage = async (url) => {
+  if (url === undefined) {
+    return;
+  }
+  const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${url}`);
+  const data = await resp.json();
+  const image = data.sprites.other["official-artwork"].front_default;
+  return image;
 };

@@ -131,7 +131,7 @@
   font-family: "Inter", sans-serif;
 }
 
-.content {
+#content {
   padding: 1rem;
   min-height: 100vh;
   background: rgb(214, 196, 236);
@@ -167,6 +167,7 @@ h1 {
   justify-content: space-evenly;
   align-content: space-evenly;
   font-size: 12px;
+  box-shadow: 2px 2px 5px black;
 }
 
 .pokeImg {
@@ -177,6 +178,7 @@ h1 {
 
 .pokeName {
   text-align: justify;
+  text-transform: capitalize;
   width: fit-content;
   height: min-content;
   line-height: 16px;
@@ -211,6 +213,7 @@ h1 {
 }
 
 .types {
+  text-transform: capitalize;
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
@@ -226,10 +229,15 @@ h1 {
 
 .backToGenPageArrow {
   text-decoration: none;
-  bottom: 80%;
+  bottom: 10%;
   color: black;
   z-index: 9;
   padding-top: 1rem;
+  width: 3rem;
+}
+
+h1 {
+  padding-left: 2rem;
 }
 
 .detailedContent {
@@ -237,6 +245,7 @@ h1 {
   flex-direction: column;
   color: white;
   border-radius: 15px;
+  box-shadow: 2px 2px 5px black;
 }
 
 nav {
@@ -258,11 +267,11 @@ nav {
   align-self: center;
   position: absolute;
   z-index: 8;
-  padding-top: 18rem;
+  padding-top: 15rem;
 }
 
 .pokeNameBig {
-  padding: 2rem 0 0 1rem;
+  padding: 0 0 0 1rem;
   font-size: 2.5rem;
   text-transform: capitalize;
   width: fit-content;
@@ -298,6 +307,7 @@ nav {
   text-decoration: none;
   color: #464646;
   padding-bottom: 20px;
+  z-index: 9;
 }
 
 .menuTitle:hover {
@@ -334,8 +344,8 @@ nav {
 .titles {
   border-bottom: 2px solid grey;
   background-color: white;
-  margin-top: 15rem;
-  padding-top: 4rem;
+  margin-top: 13.4rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -350,6 +360,7 @@ nav {
 }
 
 .mainAbout, .baseStats, .breedingInfo {
+  padding-left: 0;
   list-style: none;
   background-color: white;
   color: black;
@@ -390,7 +401,7 @@ h4 {
 }
 
 .evoImg {
-  width: 35%;
+  width: 55%;
 }
 
 .evolutionChain {
@@ -524,6 +535,10 @@ figcaption {
     z-index: 9;
     padding-top: 15rem;
   }
+  .titles {
+    margin-top: 15rem;
+    padding-top: 4rem;
+  }
   .progress {
     height: 3px;
     width: 10rem;
@@ -561,6 +576,9 @@ figcaption {
   }
   #gen9Starter {
     width: 14rem;
+  }
+  .backToGenPageArrow {
+    margin-left: 2rem;
   }
 }
 @media (min-width: 840px) {
@@ -609,6 +627,106 @@ figcaption {
     justify-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .backToGenPageArrow {
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 2000px) {
+  .genCard {
+    width: 100rem;
+    height: 100rem;
+  }
+  .genTitleLink {
+    font-size: 4rem;
+  }
+  .genStarters {
+    bottom: 1rem;
+  }
+  #gen1Starter {
+    width: 36rem;
+  }
+  #gen2Starter {
+    width: 32rem;
+  }
+  #gen3Starter {
+    width: 32rem;
+  }
+  #gen4Starter {
+    width: 32rem;
+  }
+  #gen5Starter {
+    width: 32rem;
+  }
+  #gen6Starter {
+    width: 32rem;
+  }
+  #gen7Starter {
+    width: 37rem;
+  }
+  #gen8Starter {
+    width: 27rem;
+  }
+  #gen9Starter {
+    width: 32rem;
+  }
+  .card {
+    width: 40rem;
+    height: 30rem;
+  }
+  .pokeName {
+    font-size: 5rem;
+  }
+  .pokeNum {
+    font-size: 3rem;
+  }
+  .types {
+    font-size: 3rem;
+  }
+  .typeBg {
+    width: 14rem;
+    border-radius: 2rem;
+  }
+  .pokeImg {
+    width: 22rem;
+  }
+  .genCard {
+    width: 38rem;
+  }
+  .pokeNumBig {
+    font-size: 4rem;
+  }
+  .pokeNameBig {
+    font-size: 5rem;
+  }
+  .typesBig {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+  .typeBgBig {
+    width: 14rem;
+    height: 4.5rem;
+    border-radius: 2rem;
+  }
+  .pokeImgDetailed {
+    padding-top: 15rem;
+    width: 32rem;
+  }
+  .detailedContent {
+    width: 60rem;
+    height: 100%;
+    font-size: 2rem;
+  }
+  .detailedContent h4 {
+    font-size: 3rem;
+  }
+  .detailedContent .stats {
+    gap: 5rem;
+  }
+  .detailedContent .stats .progress {
+    width: 20rem;
   }
 }
 

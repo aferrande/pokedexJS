@@ -43,6 +43,11 @@
     padding-top: 15rem;
   }
 
+  .titles {
+    margin-top: 15rem;
+    padding-top: 4rem;
+  }
+
   .progress {
     height: 3px;
     width: 10rem;
@@ -90,6 +95,9 @@
 
   #gen9Starter {
     width: 14rem;
+  }
+  .backToGenPageArrow {
+    margin-left: 2rem;
   }
 }
 
@@ -145,5 +153,129 @@
     justify-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .backToGenPageArrow {
+    margin-left: 2rem;
+  }
+}
+
+@include xxl {
+  .genCard {
+    width: 100rem;
+    height: 100rem;
+  }
+
+  .genTitleLink {
+    font-size: 4rem;
+  }
+  .genStarters {
+    bottom: 1rem;
+  }
+
+  #gen1Starter {
+    width: 36rem;
+  }
+
+  #gen2Starter {
+    width: 32rem;
+  }
+
+  #gen3Starter {
+    width: 32rem;
+  }
+
+  #gen4Starter {
+    width: 32rem;
+  }
+
+  #gen5Starter {
+    width: 32rem;
+  }
+
+  #gen6Starter {
+    width: 32rem;
+  }
+
+  #gen7Starter {
+    width: 37rem;
+  }
+
+  #gen8Starter {
+    width: 27rem;
+  }
+
+  #gen9Starter {
+    width: 32rem;
+  }
+
+  .card {
+    width: 40rem;
+    height: 30rem;
+  }
+
+  .pokeName {
+    font-size: 5rem;
+  }
+  .pokeNum {
+    font-size: 3rem;
+  }
+
+  .types {
+    font-size: 3rem;
+  }
+
+  .typeBg {
+    width: 14rem;
+    border-radius: 2rem;
+  }
+
+  .pokeImg {
+    width: 22rem;
+  }
+
+  .genCard {
+    width: 38rem;
+  }
+
+  .pokeNumBig {
+    font-size: 4rem;
+  }
+
+  .pokeNameBig {
+    font-size: 5rem;
+  }
+
+  .typesBig {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+
+  .typeBgBig {
+    width: 14rem;
+    height: 4.5rem;
+    border-radius: 2rem;
+  }
+
+  .pokeImgDetailed {
+    padding-top: 15rem;
+    width: 32rem;
+  }
+
+  .detailedContent {
+    width: 60rem;
+    height: 100%;
+    font-size: 2rem;
+    h4 {
+      font-size: 3rem;
+    }
+    .stats {
+      gap: 5rem;
+      .progress {
+        width: 20rem;
+      }
+    }
   }
 }

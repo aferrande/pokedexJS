@@ -4,23 +4,22 @@ const renderPokedex = (name, type1, type2, id, image) => {
   const render = `
     <li id=poke${id} class="card ${type1}">
     <span class="pokeNum">#${id}</span>
-      <span class="pokeName">${firstLetterUppercase(name)}</span>
+      <span class="pokeName">${name}</span>
       <div class="info">
         <ol class="types">
           <li class="typeBg ${type1} typingBgColor">
-          ${firstLetterUppercase(type1)}</li>
-          <li class="typeBg ${type2}">${
-    type2 !== undefined ? firstLetterUppercase(type2) : ""
-  }</li>
+          ${type1}</li>
+          <li class="typeBg ${type2}">${type2 !== undefined ? type2 : ""}</li>
         </ol>
         <img src="${image}" alt="${name} default sprite" class="pokeImg">
         <nav>
-        <a href="#pokemon" id="${id}" class="bttnStyling stretched-link"></a>
+        <a href="/pokemon" id="${id}" class="pokeCard bttnStyling stretched-link"></a>
         </nav>
       </div>
     </li>
   `;
 
   const pokedex = document.querySelector(".pokedex");
+  document.title = "Pokedex";
   pokedex.innerHTML += render;
 };

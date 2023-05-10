@@ -26,6 +26,7 @@ h1 {
   justify-content: space-evenly;
   align-content: space-evenly;
   font-size: 12px;
+  box-shadow: 2px 2px 5px black;
 }
 
 .pokeImg {
@@ -36,6 +37,7 @@ h1 {
 
 .pokeName {
   text-align: justify;
+  text-transform: capitalize;
   width: fit-content;
   height: min-content;
   line-height: 16px;
@@ -71,6 +73,7 @@ h1 {
 
 .types {
   @extend .pokedex;
+  text-transform: capitalize;
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
@@ -86,8 +89,9 @@ h1 {
 
 .backToGenPageArrow {
   text-decoration: none;
-  bottom: 80%;
+  bottom: 10%;
   color: black;
   z-index: 9;
   padding-top: 1rem;
+  width: 3rem;
 }

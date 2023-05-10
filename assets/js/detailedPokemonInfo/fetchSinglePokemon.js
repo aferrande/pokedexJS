@@ -9,8 +9,8 @@ const fetchSinglePokemon = async (id) => {
     const number = data.id;
     const image = data.sprites.other["official-artwork"].front_default;
 
-    pageRender(name, type1, type2, number, image);
     pokemonDetails(id);
+    singlePokemonRender(name, type1, type2, number, image);
   } catch (error) {
     console.error(error);
   }

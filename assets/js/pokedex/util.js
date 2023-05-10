@@ -1,58 +1,46 @@
-//First letter uppercase (or could just 'text-transform: capitalize' in .css)
-const firstLetterUppercase = (name) =>
-  name.charAt(0).toUpperCase() + name.slice(1);
-
-//"infinite" scroll loading of Pokemons
-
-const infiniteScrollLimiter = (value) => {
-  let limit = 14;
-  let offset = value;
-  // let total = value;
-  let scrolled = true;
-  const loadingSpinner = document.getElementById("loadingSpinner");
-  window.addEventListener(
-    "scroll",
-    () => {
-      const { scrollTop, scrollHeight, clientHeight } =
-        document.documentElement;
-
-      if (scrollTop >= scrollHeight - clientHeight && scrolled) {
-        scrolled = false;
-        loadingSpinner.classList.remove("visually-hidden");
-        offset += +14;
-        console.log(offset);
-        fetchPokemons(limit, offset);
-
-        setTimeout(() => {
-          scrolled = true;
-        }, 200);
-      } else {
-        loadingSpinner.classList.add("visually-hidden");
-      }
-    },
-    {
-      passive: true,
-    }
-  );
-};
-
-//image getter for easier work when possible
-const getPokemonImage = async (url) => {
-  if (url !== undefined) {
-    const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${url}`);
-    const data = await resp.json();
-    const image = data.sprites.other["official-artwork"].front_default;
-    return image;
-  }
-};
-
 //button function for single pokemon detail, so we don't add an eventListener to every single button, but instead to the parent div
 const getPokemonId = () => {
-  const div = document.querySelector(".content");
-  div.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") {
+  const cards = document.querySelector(".pokedex");
+  cards.addEventListener("click", (e) => {
+    if (e.target.classList[0] === "pokeCard") {
+      infiniteScrollLimiter(true, 0, 0);
       fetchSinglePokemon(e.target.id);
     }
   });
 };
-getPokemonId();
+
+//"infinite" scroll loading of Pokemons debounced
+let timeoutHandler;
+const debounce = (callback, wait) => {
+  return (...args) => {
+    const context = this;
+    clearTimeout(timeoutHandler);
+    timeoutHandler = setTimeout(() => callback.apply(context, args), wait);
+  };
+};
+
+const infiniteScrollLimiter = (isScrolled, limit, value) => {
+  let offset = value;
+  let scrolled = isScrolled;
+
+  const loadingSpinner = document.getElementById("loadingSpinner");
+
+  window.addEventListener(
+    "scroll",
+    debounce(() => {
+      const { scrollTop, scrollHeight, clientHeight } =
+        document.documentElement;
+
+      if (scrolled && limit > 0 && scrollTop >= scrollHeight - clientHeight) {
+        console.log(`${offset} e ${limit}`);
+        scrolled = false;
+        loadingSpinner.classList.remove("visually-hidden");
+        offset += +limit;
+        fetchPokemons(limit, offset);
+        scrolled = true;
+      } else {
+        loadingSpinner?.classList.add("visually-hidden");
+      }
+    }, 250)
+  );
+};

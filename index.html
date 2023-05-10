@@ -21,40 +21,34 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <title>Pokedex</title>
 
+    <!-- favicon -->
     <link
       rel="shortcut icon"
-      href="https://icons-for-free.com/download-icon-Pokedex+tool-1320568182154727832_0.svg"
+      href="./assets/images/favicon.svg"
       type="image/x-icon" />
+
+    <title>Pokemon Generations</title>
   </head>
   <body>
-    <section class="content">
-      <!-- render goes here -->
-    </section>
+    <div id="content"></div>
 
-    <!-- router -->
-    <!-- <script src="assets/js/router.js"></script> -->
-
-    <!-- common/repetitive code -->
+    <script src="assets/js/urlRouter.js"></script>
     <script src="./assets/js/pokedex/util.js"></script>
-
-    <!-- pokemon gen menu -->
-    <script src="assets/js/generationsMenu.js"></script>
-
-    <!-- base skeleton code -->
-    <script src="./assets/js/pokedex/basePageCode.js"></script>
 
     <!-- pokedex -->
     <script src="./assets/js/pokedex/fetchPokemons.js"></script>
     <script src="./assets/js/pokedex/renderPokedex.js"></script>
 
     <!-- single pokemon details -->
-    <script src="assets/js/detailedInfo/fetchSinglePokemon.js"></script>
-    <script src="assets/js/detailedInfo/pokemonDetails.js"></script>
-    <script src="assets/js/detailedInfo/pokeAbout.js"></script>
-    <script src="assets/js/detailedInfo/pokeBaseStats.js"></script>
-    <script src="assets/js/detailedInfo/pokeEvolution.js"></script>
-    <script src="assets/js/detailedInfo/SinglePokemonRender.js"></script>
+    <script src="assets/js/detailedPokemonInfo/fetchSinglePokemon.js"></script>
+    <script src="assets/js/detailedPokemonInfo/pokeEvolution.js"></script>
+    <script src="assets/js/detailedPokemonInfo/pokeAbout.js"></script>
+    <script src="assets/js/detailedPokemonInfo/pokeBaseStats.js"></script>
+    <script src="assets/js/detailedPokemonInfo/pokemonDetails.js"></script>
+    <script src="assets/js/detailedPokemonInfo/SinglePokemonRender.js"></script>
+
+    <!-- pokemon gen menu -->
+    <script src="assets/js/generationsMenu.js"></script>
   </body>
 </html>

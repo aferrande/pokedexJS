@@ -21,7 +21,6 @@ const insertToHtml = (evoChain) => {
 
 const pokeEvolution = (image1, name1, image2, name2, image3, name3) => {
   if (image2 === undefined) {
-    console.log("abdula marduk");
     const NoEvolution = "<h4>Pokemon has no evolution</h4>";
     insertToHtml(NoEvolution);
   } else if (image3 !== undefined) {

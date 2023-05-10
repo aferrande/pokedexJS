@@ -1,8 +1,8 @@
-const pageRender = (name, type1, type2, number, image) => {
+const singlePokemonRender = (name, type1, type2, number, image) => {
   const renderDetailedInfo = `
-  <div class="detailedCard">
+  
   <section class="detailedContent ${type1}">
-  <a class="backToHomePageArrow" href="#pokedex"
+  <a class="backToHomePageArrow" href="/"
     ><svg
       xmlns="http://www.w3.org/2000/svg"
      
@@ -30,20 +30,20 @@ const pageRender = (name, type1, type2, number, image) => {
     class="pokeImgDetailed" />
   <div class="contentMenu">
     <div class="titles">
-      <a href="#about" class="menuTitle" id="about" autofocus>About</a>
-      <a href="#base-stats" class="menuTitle" id="baseStats">Base Stats</a>
-      <a href="#evolution-chain" class="menuTitle" id="evolution">Evolution</a>
+      <a href="javascript:void(0)" class="menuTitle" id="about" autofocus>About</a>
+      <a href="javascript:void(0)" class="menuTitle" id="baseStats">Base Stats</a>
+      <a href="javascript:void(0)" class="menuTitle" id="evolution">Evolution</a>
     </div>
   </div>
   <div class="detailedPokemonInfo">
     
   </div>
 </section>
-</div>
+
   `;
 
   document.title = name;
-  const basePage = document.querySelector(".content");
+  const basePage = document.querySelector(".detailedCard");
 
   basePage.innerHTML = renderDetailedInfo;
 };
