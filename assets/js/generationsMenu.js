@@ -15,18 +15,4 @@ const getPokemonGen = () => {
   }
 };
 
-window.onload = () => {
-  getPokemonGen();
-};
-
-/*
-first gen 151, 0
-second 251, 151
-third 386, 251
-fourth 493, 386
-fifth 649, 493
-sixth 721, 649
-seventh 809, 721
-eighth 905, 809
-ninth 1015, 905
-*/
+window.onload = getPokemonGen;
