@@ -32,7 +32,6 @@ const infiniteScrollLimiter = (isScrolled, limit, value) => {
         document.documentElement;
 
       if (scrolled && limit > 0 && scrollTop >= scrollHeight - clientHeight) {
-        console.log(`${offset} e ${limit}`);
         scrolled = false;
         loadingSpinner.classList.remove("visually-hidden");
         offset += +limit;
