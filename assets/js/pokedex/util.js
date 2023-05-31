@@ -1,4 +1,4 @@
-//button function for single pokemon detail, so we don't add an eventListener to every single button, but instead to the parent div
+//button function for single pokemon detail, we add the eventlistener on the parent div, so we don't add one to every single button
 const getPokemonId = () => {
   const cards = document.querySelector(".pokedex");
   cards.addEventListener("click", (e) => {
@@ -9,7 +9,7 @@ const getPokemonId = () => {
   });
 };
 
-//"infinite" scroll loading of Pokemons debounced
+//"infinite" scroll loading of Pokemons + debounced
 let timeoutHandler;
 const debounce = (callback, wait) => {
   return (...args) => {

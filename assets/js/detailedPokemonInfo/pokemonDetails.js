@@ -40,7 +40,6 @@ const pokemonDetails = async (pokemon) => {
     pokeAbout(pokeAboutData);
     const showAbout = document.querySelector("#about");
     showAbout.addEventListener("click", (e) => {
-      e.preventDefault();
       pokeAbout(pokeAboutData);
     });
 
@@ -52,7 +51,6 @@ const pokemonDetails = async (pokemon) => {
 
     const showStats = document.querySelector("#baseStats");
     showStats.addEventListener("click", (e) => {
-      e.preventDefault();
       baseStats(baseStatsValue);
     });
 
@@ -73,8 +71,7 @@ const pokemonDetails = async (pokemon) => {
     );
 
     const showEvos = document.querySelector("#evolution");
-    showEvos.addEventListener("click", (e) => {
-      e.preventDefault();
+    showEvos.addEventListener("click", () => {
       if (imageArray[2] !== undefined) {
         pokeEvolution(
           imageArray[0],
