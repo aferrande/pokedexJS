@@ -32,8 +32,8 @@ const pokemonDetails = async (pokemon) => {
       height: about.height * 10,
       weight: about.weight / 10,
       abilities: abilities.join(", "),
-      gender1: (species.gender_rate / 8) * 100, //so we subtract to take male
-      gender2: 100 - (species.gender_rate / 8) * 100,
+      gender1: (species.gender_rate / 8) * 100,
+      gender2: 100 - (species.gender_rate / 8) * 100, //as gender rate is given on female basis, we subtract to take male %
       eggGroups: eggGroup.join(", "),
     };
 
@@ -90,7 +90,6 @@ const pokemonDetails = async (pokemon) => {
   }
 };
 
-//image getter for easier work when possible
 const getPokemonImage = async (url) => {
   if (url === undefined) {
     return;
