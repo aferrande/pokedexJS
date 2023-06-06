@@ -1,17 +1,14 @@
 # < Pokédex >
 <fig>
 <img src="https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/genMenu.png" alt="Pokemon Generation Page">
-<figcaption>Menu de escolha de gerações</figcaption>
 </fig>
 
 <fig>
 <img src="https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/pokedex.png" alt="Pokedex Page">
-<figcaption>Pokédex renderizada</figcaption>
 </fig>
 
 <fig>
 <img src="https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/pokemon.png" alt="Pokemon Details Page">
-<figcaption>Detalhes específicos do Pokémon selecionado</figcaption>
 </fig>
 
 ## Inicialização
@@ -22,8 +19,8 @@ Para executar o projeto, utilize as ferramentas descritas na sessão *Ferramenta
 * Extensão Live Server no VSCode.
 
 ## Links importantes
-* [Dribbble](https://dribbble.com/shots/6545819-Pokedex-App) - Usado como inspiração.
-* [PokéAPI](https://pokeapi.co/) - API com todos os dados necessários pro projeto.
+* [Dribbble](https://dribbble.com/shots/6545819-Pokedex-App) - Imagem usadas como base de inspiração.
+* [PokéAPI](https://pokeapi.co/) - API utilizada.
 
 # < Pokédex >
 
