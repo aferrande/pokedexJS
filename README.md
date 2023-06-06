@@ -1,19 +1,16 @@
 # < Pokédex >
 <fig>
-<img src="![genMenu](https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/genMenu.png)
-" alt="Pokemon Generation Page">
+<img src="https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/genMenu.png" alt="Pokemon Generation Page">
 <figcaption>Menu de escolha de gerações</figcaption>
 </fig>
 
 <fig>
-<img src="![Pokedex](https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/pokedex.png)
-" alt="Pokedex Page">
+<img src="https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/pokedex.png" alt="Pokedex Page">
 <figcaption>Pokédex renderizada</figcaption>
 </fig>
 
 <fig>
-<img src="![Pokemon](https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/pokemon.png)
-" alt="Pokemon Details Page">
+<img src="https://raw.githubusercontent.com/aferrande/pokedexJS/main/assets/images/pokemon.png" alt="Pokemon Details Page">
 <figcaption>Detalhes específicos do Pokémon selecionado</figcaption>
 </fig>
 
